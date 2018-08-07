@@ -19,9 +19,7 @@ public class CheckUpdateDialog extends BaseDialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        mDialog = new InternalDialog(mActivity, this);
-        mDialog.apply(mOption);
-        mDialog.setImageLoader(mLoader);
+        mDialog = new InternalDialog(mActivity, this).apply(mOption).setImageLoader(mLoader);
         return mDialog;
     }
 

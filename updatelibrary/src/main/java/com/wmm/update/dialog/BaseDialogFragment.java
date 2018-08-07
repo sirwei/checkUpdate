@@ -72,15 +72,4 @@ public abstract class BaseDialogFragment extends DialogFragment {
     public boolean shouldShowRequestPermissionRationale(@NonNull String permission) {
         return super.shouldShowRequestPermissionRationale(permission);
     }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        Dialog dialog = getDialog();
-        if (dialog!=null){
-            DisplayMetrics metrics = new DisplayMetrics();
-            getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
-            dialog.getWindow().setLayout((int) (metrics.widthPixels*0.25), ViewGroup.LayoutParams.WRAP_CONTENT);
-        }
-    }
 }
